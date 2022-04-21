@@ -8,12 +8,16 @@
 }
 
 .container {
-    display: grid;
+    /*display: grid;
     grid-template-areas: 
     "header"
     "main"
     "footer"
-    ;
+    ;*/
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 0;
+    margin: 0;
 }
 
 header{
@@ -49,7 +53,7 @@ main{
 }
 
 .main-home{
-    flex-direction: column-reverse;
+    /*flex-direction: column-reverse;*/
 }
 
 main h1{
@@ -139,12 +143,15 @@ footer img{
 
 @media screen and (min-width:768px){
     .container {
-        display: grid;
+        /*display: grid;
         grid-template-areas: 
         "header header header"
         "main main main"
-        "footer footer footer";
+        "footer footer footer";*/
         min-height: 100vh;
+        min-width: 100vw;
+        padding: 0;
+        margin: 0;
     }
 
     header{
@@ -163,17 +170,20 @@ footer img{
         margin-bottom: 0;
     }
 
-    main{
-        display: flex;
-        flex-direction: row;
-    }
+    
      
     /* HOME */
 
-    #main-home{
-        flex-direction: row;
+    main{
+        /*display: flex;
+        flex-direction: row;*/
     }
 
+    #main-home{
+        /*flex-direction: row;*/
+    }
+
+    
     .home-img {
         margin: 5em;
         width: 100%;
@@ -195,6 +205,13 @@ footer img{
     .img-contacto {
         width: 35%;
         margin: 0 0 2em 6em;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    .img-contacto :hover{
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
     }
 
     #img-contacto{
