@@ -8,12 +8,12 @@
 }
 
 .container {
-    /*display: grid;
+    display: grid;
     grid-template-areas: 
     "header"
     "main"
     "footer"
-    ;*/
+    ;
     min-height: 100vh;
     min-width: 100vw;
     padding: 0;
@@ -53,7 +53,7 @@ main{
 }
 
 .main-home{
-    /*flex-direction: column-reverse;*/
+    flex-direction: column-reverse;
 }
 
 main h1{
@@ -143,11 +143,11 @@ footer img{
 
 @media screen and (min-width:768px){
     .container {
-        /*display: grid;
+        display: grid;
         grid-template-areas: 
         "header header header"
         "main main main"
-        "footer footer footer";*/
+        "footer footer footer";
         min-height: 100vh;
         min-width: 100vw;
         padding: 0;
@@ -175,20 +175,18 @@ footer img{
     /* HOME */
 
     main{
-        /*display: flex;
-        flex-direction: row;*/
+        display: flex;
+        flex-direction: row;
     }
 
     #main-home{
-        /*flex-direction: row;*/
+        flex-direction: row;
     }
 
     
     .home-img {
         margin: 5em;
         width: 100%;
-        -webkit-transform: scale(1);
-        transform: scale(1);
     }
 
     .home-img :hover{
@@ -201,7 +199,7 @@ footer img{
         height: auto;
     }
 
-    /* */
+    /* CONTACTO */
     .img-contacto {
         width: 35%;
         margin: 0 0 2em 6em;
