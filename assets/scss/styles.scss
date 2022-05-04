@@ -21,7 +21,6 @@ h1{
 }
 
 h2{
-    text-align: center;
     font-size:1.8em;
     margin: 2em 0;
     color: $yellow;
@@ -32,14 +31,17 @@ h3{
     color: $yellow;
 }
 
-/* NAV */
-header{
-    background-color: $dark-gray;
-    padding: 1.5em;
-    grid-area: header;
+@mixin flex-column-center {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* NAV */
+header{
+    @include flex-column-center();
+    background-color: $dark-gray;
+    padding: 1.5em;
 
     ul{
         list-style: none;
@@ -97,8 +99,7 @@ main{
 /* SHOWS */
 
 .main-shows{
-    align-items: center;
-    flex-direction: column;
+    @include flex-column-center();
     background-color: $gray;
     color: $white;
     display: flex;
@@ -140,7 +141,7 @@ main{
 /* DISCOGRAFÍA */
 
 .main-discografia{
-    flex-direction: column;
+    @include flex-column-center();
     background-color: $gray;
     color: $white;
     display: flex;
@@ -159,9 +160,7 @@ main{
 }
 
 .card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-center();
 
     button{
         background-color: hsl(141, 73%, 42%);
@@ -180,17 +179,13 @@ main{
 /* GALERÍA */
 
 .main-galeria{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include flex-column-center();
     background-color: $gray;
     color: $white;
 }
 
 .integrante{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-center();
 
     img{
         width: 50%;
@@ -204,16 +199,13 @@ main{
 /* CONTACTO */
 
 .main-contacto{
-    flex-direction: column;
+    @include flex-column-center();
     background-color: $gray;
     color: $white;
-    display: flex;
 }
 
 .img-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-center();
 }
 
 #img-contacto{
@@ -234,11 +226,17 @@ form{
     }
 }
 
+$estilos-btn: (
+    color: $yellow,
+    borde: none,
+    radio: 0.3em,
+);
+
 /* */
 button{
-    background-color: $yellow;
-    border: none;
-    border-radius: 0.3em;
+    background-color: map-get($map: $estilos-btn, $key: color);
+    border: map-get($map: $estilos-btn, $key: borde);
+    border-radius: map-get($map: $estilos-btn, $key: radio);
     padding: 0.5em 1em;
 
     a{
@@ -248,9 +246,7 @@ button{
 }
 
 #send-btn {
-    background-color: $yellow;
-    border: none;
-    border-radius: 0.3em;
+    @extend button;
     padding: 0.4em;
 
     &:hover{
@@ -275,10 +271,14 @@ footer{
 
 @media screen and (min-width:768px){
 
-    header{
+    @mixin flex-row {
         display: flex;
-        justify-content: flex-end;
         flex-direction: row;
+    }
+
+    header{
+        @include flex-row();
+        justify-content: flex-end;
     }
 
     ul li{
@@ -294,8 +294,7 @@ footer{
     /* HOME */
 
     .main-home{
-        display: flex;
-        flex-direction: row;
+        @include flex-row();
         align-items: center;
     }
 
@@ -326,8 +325,7 @@ footer{
     /* DISCOGRAFÍA */
 
     .cards{
-        display: flex;
-        flex-direction: row;
+        @include flex-row();
 
         img{
             width: 80%;
@@ -348,22 +346,17 @@ footer{
     /* GALERÍA */
 
     .main-galeria{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        @include flex-column-center();
     }
 
     .integrantes{
-        display: flex;
-        flex-direction: row;
+        @include flex-row();
         flex-wrap: wrap;
         justify-content: center;
     }
     
     .integrante{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-column-center();
     
         img{
             width: 50%;

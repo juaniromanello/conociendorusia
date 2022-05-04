@@ -12,7 +12,6 @@ h1 {
   margin-bottom: .5em; }
 
 h2 {
-  text-align: center;
   font-size: 1.8em;
   margin: 2em 0;
   color: #ccda13; }
@@ -23,12 +22,11 @@ h3 {
 
 /* NAV */
 header {
-  background-color: #111111;
-  padding: 1.5em;
-  grid-area: header;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  background-color: #111111;
+  padding: 1.5em; }
   header ul {
     list-style: none; }
     header ul li a {
@@ -68,8 +66,9 @@ main {
 
 /* SHOWS */
 .main-shows {
-  align-items: center;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #1b1b1b;
   color: #e4e4e4;
   display: flex; }
@@ -97,7 +96,9 @@ main {
 
 /* DISCOGRAFÍA */
 .main-discografia {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #1b1b1b;
   color: #e4e4e4;
   display: flex; }
@@ -115,10 +116,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center; }
-  .card button {
+  .card button, .card #send-btn {
     background-color: #1db954;
     margin-top: 1em; }
-    .card button a {
+    .card button a, .card #send-btn a {
       color: #e4e4e4; }
 
 .iframes {
@@ -127,8 +128,8 @@ main {
 /* GALERÍA */
 .main-galeria {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   background-color: #1b1b1b;
   color: #e4e4e4; }
 
@@ -143,10 +144,11 @@ main {
 
 /* CONTACTO */
 .main-contacto {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #1b1b1b;
-  color: #e4e4e4;
-  display: flex; }
+  color: #e4e4e4; }
 
 .img-form {
   display: flex;
@@ -167,19 +169,16 @@ form {
     margin-bottom: 1em; }
 
 /* */
-button {
+button, #send-btn {
   background-color: #ccda13;
   border: none;
   border-radius: 0.3em;
   padding: 0.5em 1em; }
-  button a {
+  button a, #send-btn a {
     color: #111111;
     text-decoration: none; }
 
 #send-btn {
-  background-color: #ccda13;
-  border: none;
-  border-radius: 0.3em;
   padding: 0.4em; }
   #send-btn:hover {
     background-color: #111111;
@@ -198,8 +197,8 @@ footer {
 @media screen and (min-width: 768px) {
   header {
     display: flex;
-    justify-content: flex-end;
-    flex-direction: row; }
+    flex-direction: row;
+    justify-content: flex-end; }
   ul li {
     display: inline-block;
     margin-left: 2em; }
@@ -230,7 +229,7 @@ footer {
     flex-direction: row; }
     .cards img {
       width: 80%; }
-  .card button {
+  .card button, .card #send-btn {
     display: none; }
   .iframes {
     display: flex;
@@ -240,8 +239,8 @@ footer {
   /* GALERÍA */
   .main-galeria {
     display: flex;
-    align-items: center;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
   .integrantes {
     display: flex;
     flex-direction: row;
