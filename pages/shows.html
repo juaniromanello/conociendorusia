@@ -8,21 +8,39 @@
     <meta name="keywords" content="conociendo, rusia, banda, musica, shows, sujatovich">
     <meta name="description" content="Sitio web de la banda argentina Conociendo Rusia.">
     <meta name="author" content="Romanello Juanita">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <title>Shows - Conociendo Rusia</title>
 </head>
 <body>
     <header>
-        <a href="../index.html" id="logo">CONOCIENDO RUSIA</a>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="shows.html" class="active">Shows</a></li>
-                <li><a href="discografia.html">Discografía</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../index.html">CONOCIENDO RUSIA</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="fa fa-solid fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="shows.html">Shows</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="discografia.html">Discografía</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="galeria.html">Galería</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                  </li>                  
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
     <main class="main-shows">
         <div class="hero">
@@ -70,5 +88,7 @@
         <img src="../assets/img/twitter-logo.png" alt="twitter">
         <img src="../assets/img/youtube.png" alt="youtube">
     </footer>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
