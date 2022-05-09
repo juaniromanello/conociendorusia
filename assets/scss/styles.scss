@@ -18,17 +18,20 @@ $yellow: rgb(204, 218, 19);
 h1{
     color: $yellow;
     margin-bottom: .5em;
+    overflow-y: hidden;
 }
 
 h2{
     font-size:1.8em;
     margin: 2em 0;
     color: $yellow;
+    overflow-y: hidden;
 }
 
 h3{
     margin: .8em 0;
     color: $yellow;
+    overflow-y: hidden;
 }
 
 @mixin flex-column-center {
@@ -39,37 +42,33 @@ h3{
 
 /* NAV */
 header{
-    @include flex-column-center();
-    background-color: $dark-gray;
-    padding: 1.5em;
 
-    ul{
-        list-style: none;
-    
-        li a{
+    #navbarNav{
+
+        a{
             color: $white;
-            text-decoration: none;
-
-            &:focus{
-                color: $yellow;
-            }
 
             &:hover{
                 color: $yellow;
             }
+
+            &:active{
+                color: $yellow ;
+            }
+            
         }
+
+        .active{
+            color: $yellow;
+        }
+
     }
 
-    .active{
+    i{
         color: $yellow;
     }
-}
+    
 
-#logo{
-    color: $yellow;
-    text-decoration: none;
-    font-size: 1.2em;
-    margin-bottom: 1em;
 }
 
 main{
@@ -89,7 +88,7 @@ main{
 
 .info {
     margin: 4em 2em;
-    width: 100%;
+    width: 80%;
 }
 
 #home-img{
@@ -156,7 +155,7 @@ main{
     }
 }
 
-.card{
+.cards__card{
     @include flex-column-center();
 
     button{
@@ -268,24 +267,10 @@ footer{
 
 @media screen and (min-width:768px){
 
+
     @mixin flex-row {
         display: flex;
         flex-direction: row;
-    }
-
-    header{
-        @include flex-row();
-        justify-content: flex-end;
-    }
-
-    ul li{
-        display: inline-block;
-        margin-left: 2em;
-    }
-
-    #logo{
-        margin-right: auto;
-        margin-bottom: 0;
     }
      
     /* HOME */
@@ -293,6 +278,10 @@ footer{
     .main-home{
         @include flex-row();
         align-items: center;
+    }
+
+    .info{
+        width: 100%;
     }
 
     #home-img{
@@ -330,7 +319,7 @@ footer{
         }
     }
 
-    .card button{
+    .cards__card button{
         display: none;
     }
 

@@ -9,41 +9,33 @@
 
 h1 {
   color: #ccda13;
-  margin-bottom: .5em; }
+  margin-bottom: .5em;
+  overflow-y: hidden; }
 
 h2 {
   font-size: 1.8em;
   margin: 2em 0;
-  color: #ccda13; }
+  color: #ccda13;
+  overflow-y: hidden; }
 
 h3 {
   margin: .8em 0;
-  color: #ccda13; }
+  color: #ccda13;
+  overflow-y: hidden; }
 
 /* NAV */
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #111111;
-  padding: 1.5em; }
-  header ul {
-    list-style: none; }
-    header ul li a {
-      color: #e4e4e4;
-      text-decoration: none; }
-      header ul li a:focus {
-        color: #ccda13; }
-      header ul li a:hover {
-        color: #ccda13; }
-  header .active {
+header #navbarNav a {
+  color: #e4e4e4; }
+  header #navbarNav a:hover {
+    color: #ccda13; }
+  header #navbarNav a:active {
     color: #ccda13; }
 
-#logo {
-  color: #ccda13;
-  text-decoration: none;
-  font-size: 1.2em;
-  margin-bottom: 1em; }
+header #navbarNav .active {
+  color: #ccda13; }
+
+header i {
+  color: #ccda13; }
 
 main {
   min-height: 100vh;
@@ -59,7 +51,7 @@ main {
 
 .info {
   margin: 4em 2em;
-  width: 100%; }
+  width: 80%; }
 
 #home-img {
   width: 80%;
@@ -113,14 +105,14 @@ main {
   .cards img {
     width: 90%; }
 
-.card {
+.cards__card {
   display: flex;
   flex-direction: column;
   align-items: center; }
-  .card button, .card #send-btn {
+  .cards__card button, .cards__card #send-btn {
     background-color: #1db954;
     margin-top: 1em; }
-    .card button a, .card #send-btn a {
+    .cards__card button a, .cards__card #send-btn a {
       color: #e4e4e4; }
 
 .iframes {
@@ -196,21 +188,13 @@ footer {
     width: 2em; }
 
 @media screen and (min-width: 768px) {
-  header {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end; }
-  ul li {
-    display: inline-block;
-    margin-left: 2em; }
-  #logo {
-    margin-right: auto;
-    margin-bottom: 0; }
   /* HOME */
   .main-home {
     display: flex;
     flex-direction: row;
     align-items: center; }
+  .info {
+    width: 100%; }
   #home-img {
     margin: 5em;
     width: 600px;
@@ -231,7 +215,7 @@ footer {
     flex-direction: row; }
     .cards img {
       width: 80%; }
-  .card button, .card #send-btn {
+  .cards__card button, .cards__card #send-btn {
     display: none; }
   .iframes {
     display: flex;
