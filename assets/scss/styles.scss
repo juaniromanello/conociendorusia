@@ -13,7 +13,7 @@
 $dark-gray: rgb(17, 17, 17);
 $gray: rgb(27, 27, 27);
 $white: rgb(228, 228, 228);
-$yellow: rgb(204, 218, 19);
+$yellow: rgb(222, 226, 48);
 
 h1{
     color: $yellow;
@@ -260,8 +260,11 @@ footer{
     padding: 1em;
     grid-area: footer;
 
-    img{
-        width: 2em;
+    a{
+        i{
+            color: $yellow;
+            overflow: hidden;
+        }
     }
 }
 

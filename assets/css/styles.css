@@ -8,34 +8,34 @@
   overflow-x: hidden; }
 
 h1 {
-  color: #ccda13;
+  color: #dee230;
   margin-bottom: .5em;
   overflow-y: hidden; }
 
 h2 {
   font-size: 1.8em;
   margin: 2em 0;
-  color: #ccda13;
+  color: #dee230;
   overflow-y: hidden; }
 
 h3 {
   margin: .8em 0;
-  color: #ccda13;
+  color: #dee230;
   overflow-y: hidden; }
 
 /* NAV */
 header #navbarNav a {
   color: #e4e4e4; }
   header #navbarNav a:hover {
-    color: #ccda13; }
+    color: #dee230; }
   header #navbarNav a:active {
-    color: #ccda13; }
+    color: #dee230; }
 
 header #navbarNav .active {
-  color: #ccda13; }
+  color: #dee230; }
 
 header i {
-  color: #ccda13; }
+  color: #dee230; }
 
 main {
   min-height: 100vh;
@@ -163,7 +163,7 @@ form {
 
 /* */
 button, #send-btn {
-  background-color: #ccda13;
+  background-color: #dee230;
   border: none;
   border-radius: 0.3em;
   padding: 0.5em 1em; }
@@ -175,7 +175,7 @@ button, #send-btn {
   padding: 0.4em; }
   #send-btn:hover {
     background-color: #111111;
-    color: #ccda13; }
+    color: #dee230; }
 
 /* FOOTER */
 footer {
@@ -184,8 +184,9 @@ footer {
   text-align: center;
   padding: 1em;
   grid-area: footer; }
-  footer img {
-    width: 2em; }
+  footer a i {
+    color: #dee230;
+    overflow: hidden; }
 
 @media screen and (min-width: 768px) {
   /* HOME */
