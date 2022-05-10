@@ -186,7 +186,8 @@ footer {
   grid-area: footer; }
   footer a i {
     color: #dee230;
-    overflow: hidden; }
+    overflow: hidden;
+    font-size: 1.5em; }
 
 @media screen and (min-width: 768px) {
   /* HOME */
@@ -200,10 +201,12 @@ footer {
     margin: 5em;
     width: 600px;
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    transition: 0.5s; }
     #home-img:hover {
       -webkit-transform: scale(1.2);
-      transform: scale(1.2); }
+      transform: scale(1.2);
+      transition: 0.5s; }
   /* SHOWS */
   .hero {
     background-attachment: fixed;
@@ -249,9 +252,11 @@ footer {
   #img-contacto {
     width: 80%;
     -webkit-transform: scale(0.9);
-    transform: scale(0.9); }
+    transform: scale(0.9);
+    transition: 0.5s; }
     #img-contacto:hover {
       -webkit-transform: scale(1);
-      transform: scale(1); }
+      transform: scale(1);
+      transition: 0.5s; }
   .formulario {
     width: 120%; } }
